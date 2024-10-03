@@ -1,0 +1,151 @@
+AnswerID,AnswerText,Year,Present,MatchedText,MatchScore
+1,18-25,2021,False,,
+1,18-25,2022,True,18-25,100.0
+1,18-25,2023,True,18-29,80.0
+1,18-29,2021,False,,
+1,18-29,2022,True,18-25,80.0
+1,18-29,2023,True,18-29,100.0
+3,18-30,2021,True,18-30,100.0
+3,18-30,2022,False,,
+3,18-30,2023,False,,
+4,26-35,2021,False,,
+4,26-35,2022,True,26-35,100.0
+4,26-35,2023,False,,
+5,30-44,2021,False,,
+5,30-44,2022,False,,
+5,30-44,2023,True,30-44,100.0
+6,31-50,2021,True,31-50,100.0
+6,31-50,2022,True,36-50,80.0
+6,31-50,2023,False,,
+6,36-50,2021,True,31-50,80.0
+6,36-50,2022,True,36-50,100.0
+6,36-50,2023,False,,
+8,45-60,2021,False,,
+8,45-60,2022,False,,
+8,45-60,2023,True,45-60,100.0
+9,51 or older,2021,False,,
+9,51 or older,2022,True,51 or older,100.0
+9,51 or older,2023,True,61 or older,91.0
+9,61 or older,2021,False,,
+9,61 or older,2022,True,51 or older,91.0
+9,61 or older,2023,True,61 or older,100.0
+11,Advanced,2021,False,,
+11,Advanced,2022,True,Advanced,100.0
+11,Advanced,2023,False,,
+12,Advanced theoretical knowledge,2021,False,,
+12,Advanced theoretical knowledge,2022,False,,
+12,Advanced theoretical knowledge,2023,True,Advanced theoretical knowledge,100.0
+13,Bachelor's Degree,2021,True,Bachelor's Degree,100.0
+13,Bachelor's Degree,2022,True,Bachelor's Degree,100.0
+13,Bachelor's Degree,2023,True,Bachelor's Degree,100.0
+14,Basic understanding,2021,False,,
+14,Basic understanding,2022,False,,
+14,Basic understanding,2023,True,Basic understanding,100.0
+15,Daily,2021,False,,
+15,Daily,2022,True,Daily,100.0
+15,Daily,2023,False,,
+16,Decreased,2021,False,,
+16,Decreased,2022,False,,
+16,Decreased,2023,True,Decreased,100.0
+17,Doctorate,2021,True,Doctorate,100.0
+17,Doctorate,2022,True,Doctorate,100.0
+17,Doctorate,2023,False,,
+18,Doctorate or Professional Degree,2021,False,,
+18,Doctorate or Professional Degree,2022,False,,
+18,Doctorate or Professional Degree,2023,True,Doctorate or Professional Degree,100.0
+19,Expert,2021,True,Expert,100.0
+19,Expert,2022,True,Expert,100.0
+19,Expert,2023,False,,
+20,Expert with original contributions,2021,False,,
+20,Expert with original contributions,2022,False,,
+20,Expert with original contributions,2023,True,Expert with original contributions,100.0
+21,Future developments,2021,False,,
+21,Future developments,2022,False,,
+21,Future developments,2023,True,Future developments,100.0
+22,High School,2021,True,High School,100.0
+22,High School,2022,True,High School,100.0
+22,High School,2023,True,High School Diploma,73.0
+22,High School Diploma,2021,True,High School,73.0
+22,High School Diploma,2022,True,High School,73.0
+22,High School Diploma,2023,True,High School Diploma,100.0
+24,Interdisciplinary connections,2021,False,,
+24,Interdisciplinary connections,2022,False,,
+24,Interdisciplinary connections,2023,True,Interdisciplinary connections,100.0
+25,Intermediate,2021,False,,
+25,Intermediate,2022,True,Intermediate,100.0
+25,Intermediate,2023,False,,
+26,Major influence,2021,False,,
+26,Major influence,2022,False,,
+26,Major influence,2023,True,Major influence,100.0
+27,Master's Degree,2021,True,Master's Degree,100.0
+27,Master's Degree,2022,True,Master's Degree,100.0
+27,Master's Degree,2023,True,Master's Degree,100.0
+26,Minor influence,2021,False,,
+26,Minor influence,2022,False,,
+26,Minor influence,2023,True,Minor influence,100.0
+26,Moderate influence,2021,False,,
+26,Moderate influence,2022,False,,
+26,Moderate influence,2023,True,Moderate influence,100.0
+30,Monthly,2021,False,,
+30,Monthly,2022,True,Monthly,100.0
+30,Monthly,2023,False,,
+31,No,2021,True,No,100.0
+31,No,2022,False,,
+31,No,2023,False,,
+26,No influence,2021,False,,
+26,No influence,2022,False,,
+26,No influence,2023,True,No influence,100.0
+33,Not at all familiar,2021,True,Not at all familiar,100.0
+33,Not at all familiar,2022,False,,
+33,Not at all familiar,2023,False,,
+34,Not interested,2021,False,,
+34,Not interested,2022,True,Not interested,100.0
+34,Not interested,2023,False,,
+35,Novice,2021,False,,
+35,Novice,2022,True,Novice,100.0
+35,Novice,2023,False,,
+36,Over 50,2021,True,Over 50,100.0
+36,Over 50,2022,False,,
+36,Over 50,2023,False,,
+37,Practical application knowledge,2021,False,,
+37,Practical application knowledge,2022,False,,
+37,Practical application knowledge,2023,True,Practical application knowledge,100.0
+37,Practical applications,2021,False,,
+37,Practical applications,2022,False,,
+37,Practical applications,2023,True,Practical applications,100.0
+39,Rarely or never,2021,False,,
+39,Rarely or never,2022,True,Rarely or never,100.0
+39,Rarely or never,2023,False,,
+40,Remained the same,2021,False,,
+40,Remained the same,2022,False,,
+40,Remained the same,2023,True,Remained the same,100.0
+41,Significantly increased,2021,False,,
+41,Significantly increased,2022,False,,
+41,Significantly increased,2023,True,Significantly increased,100.0
+41,Slightly increased,2021,False,,
+41,Slightly increased,2022,False,,
+41,Slightly increased,2023,True,Slightly increased,100.0
+43,Somewhat familiar,2021,True,Somewhat familiar,100.0
+43,Somewhat familiar,2022,False,,
+43,Somewhat familiar,2023,False,,
+34,Somewhat interested,2021,False,,
+34,Somewhat interested,2022,True,Somewhat interested,100.0
+34,Somewhat interested,2023,False,,
+45,Theoretical foundations,2021,False,,
+45,Theoretical foundations,2022,False,,
+45,Theoretical foundations,2023,True,Theoretical foundations,100.0
+46,Under 18,2021,True,Under 18,100.0
+46,Under 18,2022,False,,
+46,Under 18,2023,False,,
+47,Very familiar,2021,True,Very familiar,100.0
+47,Very familiar,2022,False,,
+47,Very familiar,2023,False,,
+34,Very interested,2021,False,,
+34,Very interested,2022,True,Very interested,100.0
+34,Very interested,2023,False,,
+49,Weekly,2021,False,,
+49,Weekly,2022,True,Weekly,100.0
+49,Weekly,2023,False,,
+50,Yes,2021,True,Yes,100.0
+50,Yes,2022,False,,
+50,Yes,2023,False,,

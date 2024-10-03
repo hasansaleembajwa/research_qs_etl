@@ -1,0 +1,6 @@
+pyodbc
+pandas
+pyyaml
+fuzzywuzzy
+snowflake-connector-python
+dbt-snowflake

@@ -1,0 +1,13 @@
+research_questions_etl:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: 'oacgvzl-ml59242'
+      user: 'etl_user'
+      password: '!QAZ@WSX3edc'
+      role: 'etl_role'
+      database: 'research_db'
+      warehouse: 'etl_warehouse'
+      schema: 'etl_schema'
+      threads: 4

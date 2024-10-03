@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "2021": {
+      "question_count": 4,
+      "category_count": 3,
+      "option_count": 14
+    },
+    "2022": {
+      "question_count": 5,
+      "category_count": 4,
+      "option_count": 19
+    },
+    "2023": {
+      "question_count": 6,
+      "category_count": 5,
+      "option_count": 24
+    }
+  },
+  "schema_differences": {
+    "Questions": {},
+    "AnswerOptions": {},
+    "QuestionCategories": {}
+  }
+}

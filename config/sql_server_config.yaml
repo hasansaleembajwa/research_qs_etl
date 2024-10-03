@@ -1,0 +1,15 @@
+# File: config/sql_server_config.yaml
+
+sql_servers:
+  - host: "localhost,1433"
+    database: "ResearchQuestionsDB2021"
+    username: ${SQL_SERVER_USERNAME}
+    password: ${SQL_SERVER_PASSWORD}
+  - host: "localhost,1433"
+    database: "ResearchQuestionsDB2022"
+    username: ${SQL_SERVER_USERNAME}
+    password: ${SQL_SERVER_PASSWORD}
+  - host: "localhost,1433"
+    database: "ResearchQuestionsDB2023"
+    username: ${SQL_SERVER_USERNAME}
+    password: ${SQL_SERVER_PASSWORD}

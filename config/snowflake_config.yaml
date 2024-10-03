@@ -1,0 +1,8 @@
+# File: config/snowflake_config.yaml
+
+account: 'oacgvzl-ml59242'
+user: 'etl_user'
+password: '!QAZ@WSX3edc'
+warehouse: 'etl_warehouse'
+database: 'research_db'
+schema: 'etl_schema'

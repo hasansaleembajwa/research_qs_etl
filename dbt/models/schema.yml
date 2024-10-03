@@ -1,0 +1,153 @@
+version: 2
+
+sources:
+  - name: raw
+    database: RESEARCH_DB  # Snowflake database name
+    schema: ETL_SCHEMA  # Snowflake schema name
+    tables:
+      - name: consolidated_research_questions
+
+models:
+  - name: stg_research_questions
+    description: "Staged research questions data"
+    columns:
+      - name: question_id
+        description: "The unique identifier for the question"
+        tests:
+          - unique
+          - not_null
+      - name: year
+        description: "The year the question was introduced or last updated"
+        tests:
+          - not_null
+      - name: question_text
+        description: "The text of the research question"
+        tests:
+          - not_null
+      - name: category
+        description: "The category of the research question"
+      - name: is_active
+        description: "Whether the question is currently active"
+      - name: valid_from
+        description: "The date from which this version of the question is valid"
+        tests:
+          - not_null
+      - name: valid_to
+        description: "The date until which this version of the question is valid"
+      - name: answer_set
+        description: "The set of possible answers for this question"
+
+
+  - name: int_research_questions_unified
+    description: "Unified view of research questions with status"
+    columns:
+      - name: question_id
+        description: "The unique identifier for the question"
+        tests:
+          - unique
+          - not_null
+      - name: year
+        description: "The year the question was introduced or last updated"
+        tests:
+          - not_null
+      - name: question_text
+        description: "The text of the research question"
+        tests:
+          - not_null
+      - name: category
+        description: "The category of the research question"
+      - name: is_active
+        description: "Whether the question is currently active"
+        tests:
+          - accepted_values:
+              values: [true, false]
+      - name: valid_from
+        description: "The date from which this version of the question is valid"
+        tests:
+          - not_null
+      - name: valid_to
+        description: "The date until which this version of the question is valid"
+      - name: answer_set
+        description: "The set of possible answers for this question"
+      - name: question_status
+        description: "The current status of the question"
+        tests:
+          - accepted_values:
+              values: ['Current', 'Historical', 'Deprecated']
+
+  - name: consolidated_research_questions
+    columns:
+      - name: question_id
+        tests:
+          - unique
+          - not_null
+      - name: year
+        tests:
+          - accepted_values:
+              values: [2021, 2022, 2023]
+      - name: category
+        tests:
+          - accepted_values:
+              values: ['Demographics', 'Research Topic A', 'Research Topic B', 'Topic C', 'Topic D']
+      - name: is_active
+        tests:
+          - accepted_values:
+              values: [true, false]
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: ['question_id', 'year']
+      - dbt_utils.expression_is_true:
+          expression: "json_array_length(parse_json(answer_set)) > 0"
+
+  - name: question_evolution
+    columns:
+      - name: question_id
+        tests:
+          - relationships:
+              to: ref('consolidated_research_questions')
+              field: question_id
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "evolution_type IN ('New Question', 'Modified Question', 'Modified Answer Set', 'Unchanged')"
+          
+  # - name: consolidated_research_questions
+    # description: "Current set of active research questions across all years"
+    # columns:
+    #   - name: question_id
+    #     description: "The unique identifier for the question"
+    #     tests:
+    #       - unique
+    #       - not_null
+    #   - name: year
+    #     description: "The year the question was introduced or last updated"
+    #     tests:
+    #       - not_null
+    #   - name: question_text
+    #     description: "The text of the research question"
+    #     tests:
+    #       - not_null
+    #   - name: category
+    #     description: "The category of the research question"
+    #   - name: is_active
+    #     description: "Whether the question is currently active"
+    #     tests:
+    #       - accepted_values:
+    #           values: [true]
+    #   - name: valid_from
+    #     description: "The date from which this version of the question is valid"
+    #     tests:
+    #       - not_null
+    #   - name: valid_to
+    #     description: "The date until which this version of the question is valid"
+    #   - name: question_status
+    #     description: "The current status of the question"
+    #     tests:
+    #       - accepted_values:
+    #           values: ['Current']
+    #   - name: answer_set
+    #     description: "The set of possible answers for this question"
+    # tests:
+    #   - dbt_utils.unique_combination_of_columns:
+    #       combination_of_columns:
+    #         - question_id
+    #         - valid_from

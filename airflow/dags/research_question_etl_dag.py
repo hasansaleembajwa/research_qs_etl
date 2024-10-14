@@ -2,7 +2,7 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
-from your_etl_script import run_etl  # Import your main ETL function
+# from your_etl_script import run_etl  # Import your main ETL function
 
 default_args = {
     'owner': 'airflow',
